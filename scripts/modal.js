@@ -24,9 +24,9 @@ const modal = () => {
   const modalInputs = document.createElement("DIV");
   modalInputs.classList.add("input-container");
   modalInputs.innerHTML = `
-    <span>Titulo:</span>
+    <span>Titulo: <span style='color: red'><i>*</i></span></span>
     <input type='text' id='title' class='form-control form-control-sm'></input>
-    <span>Explicacion:</span>
+    <span>Explicacion: <span style='color: red'><i>*</i></span></span>
     <textarea id="explanation" class="form-control" rows='2'></textarea>
     <span>Ejemplo:</span>
     <span style='color: gray'>Keys: NL = Next Line // TAB = Tabulation</span>
@@ -59,7 +59,7 @@ const modal = () => {
       'input[name = "radio"]:checked'
     );
 
-    if (titleInput === "" || explanationInput === "" || codeInput === "") {
+    if (titleInput === "" || explanationInput === "") {
       return console.log("Relleno los campos");
     }
 

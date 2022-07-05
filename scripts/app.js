@@ -62,6 +62,9 @@ const createInfo = () => {
             if(optional === '') {
                 optionalContainer.remove();
             }
+            if(code === '') {
+                codeContainer.remove();
+            }
             
             mainContainer[parseInt(checked)].appendChild(topicContainer);
 
