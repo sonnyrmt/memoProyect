@@ -3,6 +3,7 @@
 
 export const factory = i => {
     let array = i.split(' ');
+
     
     if(array.includes('let')) {
         const color = colorize('blue', 'let');
@@ -88,6 +89,12 @@ export const factory = i => {
         const space = '<br>'
         const index = findIndex(array,'NL')
         modifyAllIndexes(index,array,space);
+    }
+
+    if(array.includes('function')) {
+        const returnColor = colorize('green', 'function');
+        const index = findIndex(array,'function');
+        modifyAllIndexes(index,array,returnColor);
     }
     
     const output = array.join(' ');

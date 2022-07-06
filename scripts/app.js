@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     callModal();
     topicArray = JSON.parse(localStorage.getItem("topic")) || [];
     createInfo();
+
+    let button = document.querySelector('a.btn');
+    button.addEventListener('click', () => {
+        let functionName = button.getAttribute('data-function');
+        let functionBody = window[functionName].toString();
+        button.setAttribute('href', 'javascript:('+functionBody+')()');
+    });
 });
 
 export const inputs = (obj) => {
