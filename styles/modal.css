@@ -15,7 +15,7 @@
     width: 50%;
     height: auto;
     background-color: #f8f8ff;
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 20px;
     overflow: hidden;
     display: flex;
@@ -30,7 +30,7 @@
     border: red 1px solid;
     color: red;
     background-color: #f8f8ff;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     display: flex;
     align-self: flex-end;
