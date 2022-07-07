@@ -3,7 +3,7 @@ var localStorageBackup = function() {
     for (i = 0; i < localStorage.length; i++) {
       var key = localStorage.key(i);
       var value = localStorage.getItem(key);
-      backup[key] = value;
+      backup[key] = btoa(encodeURIComponent(value));
     }
     var json = JSON.stringify(backup);
     var base = btoa(json);
